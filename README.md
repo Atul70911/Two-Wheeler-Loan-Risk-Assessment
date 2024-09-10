@@ -1,74 +1,51 @@
 # Two-Wheeler-Loan-Risk-Assessment
-Loan Risk Classification Model
-This repository contains a machine learning model for classifying loan applications into two categories: APPROVED and DECLINED. The project includes code for data preprocessing, model training, evaluation, and making predictions.
+This repository provides a machine learning solution for classifying loan applications into APPROVED or DECLINED categories. The script performs data preprocessing, model training, evaluation, and prediction using a Random Forest Classifier.
 
-Table of Contents
-Project Overview
-Data
-Dependencies
-Usage
-Model Performance
-License
-Contact
-Project Overview
-The goal of this project is to build a predictive model that can automate the classification of loan applications. The project employs a Random Forest Classifier, integrated with preprocessing steps to handle missing values, encode categorical features, and scale numerical data.
+Overview
+The loan_classification.py script includes the following steps:
 
-The model is evaluated based on its accuracy, precision, recall, and F1-score.
-
-Data
-The project uses two CSV files:
-
-Assignment_Train.csv: Training dataset with labeled loan application data.
-Assignment_Test.csv: Test dataset used for making predictions.
-Data columns include:
-
-Personal details
-Loan-related features
-Application information
-Note: Ensure the datasets are available in the root directory of the project.
-
-Dependencies
-The project requires the following Python libraries:
+Data Loading: Reads training and test datasets.
+Preprocessing: Cleans and prepares the data for modeling.
+Model Training: Uses a Random Forest Classifier to train on the training dataset.
+Evaluation: Assesses model performance on the training set.
+Prediction: Generates predictions on the test dataset and saves them to a CSV file.
+File Structure
+loan_classification.py: The main script for data preprocessing, model training, evaluation, and prediction.
+Assignment_Train.csv: Training data (to be provided).
+Assignment_Test.csv: Test data (to be provided).
+predictions.csv: Contains the UID and predicted status for the test dataset.
+Prerequisites
+Ensure you have the following Python packages installed:
 
 pandas
 numpy
 scikit-learn
-To install the required dependencies, use the following command:
+You can install the required packages using pip:
 
-bash
-Copy code
+
 pip install pandas numpy scikit-learn
 Usage
 Clone the Repository
 
-bash
-Copy code
+
 git clone https://github.com/your-username/loan-risk-classification.git
 cd loan-risk-classification
 Prepare the Data
 
-Ensure that Assignment_Train.csv and Assignment_Test.csv are placed in the root directory of the project.
+Place Assignment_Train.csv and Assignment_Test.csv in the root directory of the project.
 
-Run the Model
+Run the Script
 
-Execute the script loan_classification.py to preprocess the data, train the model, evaluate its performance, and generate predictions.
+Execute the script to preprocess data, train the model, evaluate it, and generate predictions:
 
-bash
-Copy code
+
 python loan_classification.py
-This script will:
+The script will output:
 
-Load and preprocess the data.
-Train a Random Forest Classifier.
-Evaluate the model on the training data.
-Make predictions on the test data.
-Save the predictions to predictions.csv.
-Check the Results
-
-After running the script, check loan_predictions.csv for test data predictions and model_performance.txt for evaluation metrics.
-
+predictions.csv: Contains predictions for the test dataset.
+Model performance metrics printed to the console.
 Model Performance
-The Random Forest Classifier achieved the following metrics on the training dataset:
+The Random Forest Classifier achieves the following performance metrics on the training data:
 
 Accuracy: 86.2%
 Precision:
@@ -80,9 +57,6 @@ DECLINED: 0.89
 F1-Score:
 APPROVED: 0.89
 DECLINED: 0.81
-The model demonstrates strong performance in distinguishing between approved and declined loans, with a balanced approach to precision and recall.
-
-
 Contact
 For any questions or issues, please contact:
 
